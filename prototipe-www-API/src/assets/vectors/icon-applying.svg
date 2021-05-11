@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <filter id="jck2uhsqba">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.165949 0 0 0 0 0.601202 0 0 0 0 0.967731 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g filter="url(#jck2uhsqba)" transform="translate(-691 -337)">
+            <g>
+                <path d="M0 0L60 0 60 60 0 60z" transform="translate(691 337)"/>
+                <path fill="#000" fill-rule="nonzero" d="M47.5 7.5H37.05c-1.05-2.9-3.8-5-7.05-5s-6 2.1-7.05 5H12.5c-2.75 0-5 2.25-5 5v35c0 2.75 2.25 5 5 5h35c2.75 0 5-2.25 5-5v-35c0-2.75-2.25-5-5-5zM30 7.5c1.375 0 2.5 1.125 2.5 2.5s-1.125 2.5-2.5 2.5-2.5-1.125-2.5-2.5 1.125-2.5 2.5-2.5zm-5 35l-10-10 3.525-3.525L25 35.425 41.475 18.95 45 22.5l-20 20z" transform="translate(691 337)"/>
+            </g>
+        </g>
+    </g>
+</svg>

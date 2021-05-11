@@ -1,0 +1,180 @@
+{
+  "_queryType": "Query",
+  "_mutationType": "Mutation",
+  "_subscriptionType": null,
+  "_directives": [
+    {
+      "name": "capitalize",
+      "description": null,
+      "locations": ["FIELD_DEFINITION"],
+      "args": []
+    },
+    {
+      "name": "date",
+      "description": null,
+      "locations": ["FIELD_DEFINITION"],
+      "args": [
+        {
+          "name": "defaultFormat",
+          "description": null,
+          "type": "String",
+          "defaultValue": "MMMM Do YYYY"
+        }
+      ]
+    },
+    {
+      "name": "cacheControl",
+      "description": null,
+      "locations": ["FIELD_DEFINITION", "OBJECT", "INTERFACE"],
+      "args": [
+        { "name": "maxAge", "description": null, "type": "Int" },
+        { "name": "scope", "description": null, "type": "CacheControlScope" }
+      ]
+    },
+    {
+      "name": "include",
+      "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
+      "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+      "args": [
+        {
+          "name": "if",
+          "description": "Included when true.",
+          "type": "Boolean!"
+        }
+      ]
+    },
+    {
+      "name": "skip",
+      "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
+      "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+      "args": [
+        {
+          "name": "if",
+          "description": "Skipped when true.",
+          "type": "Boolean!"
+        }
+      ]
+    },
+    {
+      "name": "deprecated",
+      "description": "Marks an element of a GraphQL schema as no longer supported.",
+      "locations": [
+        "FIELD_DEFINITION",
+        "ARGUMENT_DEFINITION",
+        "INPUT_FIELD_DEFINITION",
+        "ENUM_VALUE"
+      ],
+      "args": [
+        {
+          "name": "reason",
+          "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by [CommonMark](https://commonmark.org/).",
+          "type": "String",
+          "defaultValue": "No longer supported"
+        }
+      ]
+    },
+    {
+      "name": "specifiedBy",
+      "description": "Exposes a URL that specifies the behaviour of this scalar.",
+      "locations": ["SCALAR"],
+      "args": [
+        {
+          "name": "url",
+          "description": "The URL that specifies the behaviour of this scalar.",
+          "type": "String!"
+        }
+      ]
+    }
+  ],
+  "astNode": null,
+  "_typeMap": {
+    "Query": "Query",
+    "Boolean": "Boolean",
+    "ID": "ID",
+    "User": "User",
+    "String": "String",
+    "userExpertiseType": "userExpertiseType",
+    "userSkillsType": "userSkillsType",
+    "userRegionalExperienceType": "userRegionalExperienceType",
+    "Country": "Country",
+    "state": "state",
+    "Expertise": "Expertise",
+    "RegionalExperience": "RegionalExperience",
+    "Skills": "Skills",
+    "ReferralCode": "ReferralCode",
+    "Initials": "Initials",
+    "MasterSettings": "MasterSettings",
+    "Arenas": "Arenas",
+    "StoryType": "StoryType",
+    "AboutUser": "AboutUser",
+    "aboutStateType": "aboutStateType",
+    "aboutCountryType": "aboutCountryType",
+    "RelatedExpertiseType": "RelatedExpertiseType",
+    "RelatedSkills": "RelatedSkills",
+    "relatedRegionalType": "relatedRegionalType",
+    "fileType": "fileType",
+    "countryDetailsType": "countryDetailsType",
+    "stateDetailsType": "stateDetailsType",
+    "storySubmitUser": "storySubmitUser",
+    "relatedStoryType": "relatedStoryType",
+    "RelatedArenasType": "RelatedArenasType",
+    "RelatedSettingsType": "RelatedSettingsType",
+    "jobAlerts": "jobAlerts",
+    "relatedJobAlertSkillsType": "relatedJobAlertSkillsType",
+    "relatedJobAlertExpertiseType": "relatedJobAlertExpertiseType",
+    "replyAdded": "replyAdded",
+    "Referral": "Referral",
+    "emailReferralType": "emailReferralType",
+    "Mutation": "Mutation",
+    "UserAuth": "UserAuth",
+    "ForgotPassword": "ForgotPassword",
+    "CountryInput": "CountryInput",
+    "StateInput": "StateInput",
+    "BulkCountry": "BulkCountry",
+    "ExpertiseInput": "ExpertiseInput",
+    "RegionalExperienceInput": "RegionalExperienceInput",
+    "SkillsInput": "SkillsInput",
+    "ReferralCodeInput": "ReferralCodeInput",
+    "InitialsInput": "InitialsInput",
+    "SettingsInput": "SettingsInput",
+    "ArenasInput": "ArenasInput",
+    "StoryTypeInput": "StoryTypeInput",
+    "AboutInput": "AboutInput",
+    "StateInputAbout": "StateInputAbout",
+    "CountryInputAbout": "CountryInputAbout",
+    "ExpertiseInputAbout": "ExpertiseInputAbout",
+    "SkillsInputAbout": "SkillsInputAbout",
+    "regionalInputAbout": "regionalInputAbout",
+    "Upload": "Upload",
+    "aboutUserAdded": "aboutUserAdded",
+    "submitStoryInput": "submitStoryInput",
+    "relatedStoryTypeInput": "relatedStoryTypeInput",
+    "relatedArenasInput": "relatedArenasInput",
+    "relatedSettingsInput": "relatedSettingsInput",
+    "storyAdded": "storyAdded",
+    "listJobAlertsInput": "listJobAlertsInput",
+    "relatedSkillsInput": "relatedSkillsInput",
+    "relatedExpertiseInput": "relatedExpertiseInput",
+    "relatedExperienceInput": "relatedExperienceInput",
+    "jobAdded": "jobAdded",
+    "replyToJobAlertInput": "replyToJobAlertInput",
+    "reply": "reply",
+    "referralInput": "referralInput",
+    "Referrals": "Referrals",
+    "__Schema": "__Schema",
+    "__Type": "__Type",
+    "__TypeKind": "__TypeKind",
+    "__Field": "__Field",
+    "__InputValue": "__InputValue",
+    "__EnumValue": "__EnumValue",
+    "__Directive": "__Directive",
+    "__DirectiveLocation": "__DirectiveLocation",
+    "Date": "Date",
+    "CacheControlScope": "CacheControlScope",
+    "Int": "Int"
+  },
+  "_implementations": {}
+}
+
+
+

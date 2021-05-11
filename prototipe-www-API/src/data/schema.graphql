@@ -1,0 +1,98 @@
+
+type Arena {
+  name: String
+}
+
+type Expertise {
+  name: String!
+}
+
+type Regions {
+  name: String
+}
+
+type Skill {
+  name: String!
+}
+
+type StoryType {
+  name: String!
+}
+
+enum SubmisionStatus {
+  pending
+  accepted
+  awarded
+}
+
+
+type Story @model
+@key(name: "byUser", fields: ["userID", "id"]) {
+  id: ID!
+  name: String!
+  type: StoryType!
+  budget: Int
+  description: String!
+  arenas: [Arena]
+  book: String
+  talent: String
+  venue: String
+  userID: ID!
+  user: User @connection (fields: ["userID"])
+  alerts: [JobAlert] @connection(keyName: "byStory", fields: ["id"])
+}
+
+type JobAlert @model
+@key(name: "byStory", fields: ["storyID", "id"])
+{
+  id: ID!
+  storyID: ID!
+  story: Story @connection (fields: "storyID")
+  description: String!
+  submisions: [Submision] @connection(keyName: "byAlert", fields: ["id"])
+}
+
+type Submision @model
+@key(name: "byAlert", fields: ["alertID", "id"])
+@key(name: "byUser", fields: ["userID", "id"])
+ {
+  id: ID!
+  alertID: ID!
+  userID: ID!
+  status: SubmisionStatus
+  description: String!
+  files: String
+  alert: JobAlert @connection (fields: ["alertID"])
+  user: User @connection (fields: ["userID"])
+}
+
+type User @model {
+  id: ID!
+  user: String
+  name: String!
+  lastName: String!
+  email: String!
+  phone: String
+
+  country: String
+  state: String
+  city: String
+  address1: String
+  address2: String
+
+  expertises: String
+  regionalExperience: String
+  skills: String
+  yourStoryAbout: String
+
+  currentEmployer: String
+  resume: String
+
+  facebook: String
+  instagram: String
+  linkedin: String
+  twitter: String
+
+  stories: [Story] @connection(keyName: "byUser", fields: ["id"])
+  submissions: [Submision] @connection(keyName: "byUser", fields: ["id"])
+}
